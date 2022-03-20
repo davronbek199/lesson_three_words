@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
 
     return orientation == Orientation.portrait
         ? forPortrait(context)
-        : forLandscape();
+        : forLandscape(context);
   }
 
   Widget myWord(Words words, context) {
@@ -89,8 +89,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget forLandscape() {
-
+  Widget forLandscape(context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Words"),
@@ -113,11 +112,10 @@ class _HomePageState extends State<HomePage> {
                 myWord(list[9], context),
                 myWord(list[10], context),
                 myWord(list[11], context),
-
-
               ],
             ),
           ),
+          Container()
         ],
       ),
     );
